@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
   // createRoutesFromElements,
   // Route,
-} from 'react-router-dom';
-import { Contacts, Home, Layout } from './routes';
+} from 'react-router-dom'
+import { Contacts, Home, Layout } from './routes'
 
-import { loader } from './routes/Contacts';
+import { loader } from './routes/Contacts'
 
 const router = createBrowserRouter([
   {
@@ -15,9 +15,9 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: '/', element: <Home /> },
-      { path: '/contacts', element: <Contacts />, loader },
+      { path: '/contacts', element: <Contacts />, loader }
     ],
-  },
+  }
 ])
 
 // // alternate setup
@@ -31,9 +31,7 @@ const router = createBrowserRouter([
 // );
 
 function App() {
-  return (
-    <RouterProvider router={router}/>
-  );
+  return <RouterProvider router={router} />
 }
 
-export { App };
+export { App }
